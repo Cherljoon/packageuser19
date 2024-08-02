@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 # tests/test_addition.py
-from packageuser34.addition import add
+from packageuser19.addition import add
 
 
 def test_add():
