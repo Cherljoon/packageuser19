@@ -1,0 +1,38 @@
+name: Hello World Workflow
+
+on: [push]
+
+jobs:
+    hello_world_job:
+    runs-on: ubuntu-latest
+    
+
+    steps:
+    - name: Checkout repository content
+    uses: actions/checkout@v4
+ 
+    - name: Run a one-line script
+    run: echo "Hello, World!"
+
+"""
+name: {workflow의 이름}
+on: {workflow를 trigger하는 이벤트}
+jobs: {모든 job을 그룹화}
+    {job의 이름}:
+        runs-on: {job을 실행할 runner}
+        steps:
+            - name: {step의 이름}
+                uses: {action 이름}
+            - name: {step의 이름}
+            run: {runner안에서 실행할 명령어}
+
+
+name: 워크플로우의 이름을 지정함.
+on: 워크플로우를 트리거하는 이벤트를 지정함. 여기서는 push 이벤트를 사용함.
+jobs: 워크플로우에서 수행할 작업들을 정의함.
+hello_world_job: 잡의 이름임.
+runs-on: 잡이 실행될 환경을 지정함. 여기서는 ubuntu-latest를 사용함.
+steps: 잡 내에서 실행될 단계를 정의함.
+- name: Checkout repository content: 저장소의 내용을 체크아웃하는 단계임.
+- name: Run a one-line script: “Hello, World!” 메시지를 출력하는 단순한 스
+"""
